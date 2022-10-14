@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hmeftah <hmeftah@student.42.fr>            +#+  +:+       +#+         #
+#    By: hmeftah <hmeftah@student.1337.ma>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 19:42:43 by hmeftah           #+#    #+#              #
-#    Updated: 2022/10/12 21:44:20 by hmeftah          ###   ########.fr        #
+#    Updated: 2022/10/14 18:34:30 by hmeftah          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ $(NAME) : $(OBJECTS)
 	ar -r $(NAME) $(OBJECTS)
 
 %.o : %.c
-	gcc $(FLAGS) -I $(INCLUDE) -c $<
+	$(CC) $(FLAGS) -I $(INCLUDE) -c $<
 
 clean : 
 	rm -f $(OBJECTS)

@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hmeftah <hmeftah@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hmeftah <hmeftah@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:27:55 by hmeftah           #+#    #+#             */
-/*   Updated: 2022/10/05 16:22:30 by hmeftah          ###   ########.fr       */
+/*   Updated: 2022/10/14 22:17:59 by hmeftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int	spaces(const char *str)
+static int	spaces(const char *str)
 {
 	int	i;
 
@@ -43,7 +43,7 @@ int	ft_atoi(const char *str)
 	while (str[i] && str[i] >= '0' && str[i] <= '9')
 	{
 		res = res * 10;
-		res += str[i] - '0';
+		res += str[i] - 48;
 		i++;
 	}
 	return (res * neg);
